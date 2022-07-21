@@ -2,7 +2,7 @@
 
 import React,{useState, useEffect} from "react";
 
-function App() {
+export default function App() {
   const [dogImage, setDogImage] = useState(null);
 
   useEffect(() => {
@@ -14,9 +14,8 @@ function App() {
   }, []);
 
 
-  if (!dogImage) return <p>Loading...</p>;
+   if (!dogImage) return <p>Loading...</p>;
 
  return <img src={dogImage} alt="A Random Dog" />;
 }
 
-export default App;
